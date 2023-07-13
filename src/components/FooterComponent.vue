@@ -174,7 +174,31 @@ methods: {
 
             </div>
         </section>
-        <section class="bottom-footer">bottom-footer</section>
+
+        <section class="bottom-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div>
+                        <button>SING-UP NOW!</button>
+                    </div>
+
+                    <div class="row">
+                        <div class="follow">
+                            FOLLOWE US
+                        </div>
+                        <div class="socials-container">
+                            <a href="#"><img src="../assets/img/footer-facebook.png" alt="logo-facebook"></a>
+                            <a href="#"><img src="../assets/img/footer-periscope.png" alt="logo-periscope"></a>
+                            <a href="#"><img src="../assets/img/footer-pinterest.png" alt="logo-pinterest"></a>
+                            <a href="#"><img src="../assets/img/footer-twitter.png" alt="logo-twitter"></a>
+                            <a href="#"><img src="../assets/img/footer-youtube.png" alt="logo-youtube"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </footer>
 </template>
 
@@ -302,6 +326,37 @@ methods: {
 // --- BOTTOM FOOTER ---
 .bottom-footer {
     background-color: $footer-bg-black;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    button {
+        background-color: $footer-bg-black;
+        color: white;
+        border: 1px solid $footer-bg-blue;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        box-shadow: 0px 0px 6px white;
+    }
+
+    .follow {
+        color: $footer-bg-blue;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .socials-container {
+        img {
+            padding: 10px;
+        }
+    }
 }
 
 </style>
