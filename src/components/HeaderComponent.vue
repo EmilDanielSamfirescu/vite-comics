@@ -89,7 +89,7 @@ ul {
             text-decoration: none;
             text-transform: uppercase;
             font-weight: bold;
-            padding: 50px 10px;
+            padding: 40px 10px;
         }
 
         a:hover {
