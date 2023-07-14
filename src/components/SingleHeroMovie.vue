@@ -22,7 +22,7 @@
                 <div class="img-container">
                     <img :src="movieImg" :alt="movieTitle">
                 </div>
-                <h4>{{ movieTitle }}</h4>
+                <p>{{ movieTitle }}</p>
             </div>
 
 </template>
@@ -32,9 +32,7 @@
 @use "../assets/scss/partials/mixin.scss" as *;
 
 .single-serie {
-        background-color: rgb(61, 100, 100);
         width: calc((100% / 6) - 20px);
-        border: 2px dashed red;
         margin: 10px;
 
         .img-container {
@@ -48,9 +46,11 @@
             }
         }
 
-        h4 {
+        p {
             text-transform: uppercase;
-            padding: 10px 0px;
+            text-align: start;
+            font-size: 0.8em;
+            padding: 15px 0px;
         }
     }
 

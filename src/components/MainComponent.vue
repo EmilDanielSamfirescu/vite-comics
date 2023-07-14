@@ -102,18 +102,11 @@ export default {
                 :movieImg="singleMovie.thumb"
                 :movieTitle="singleMovie.series"/>
 
-                
-                <!-- <div class="single-serie"
-                v-for="(singleMovie , indexSeries) in seriesArray" :key="indexSeries">
-                    <div class="img-container">
-                        <img :src="singleMovie.thumb" :alt="singleMovie.series">
-                    </div>
-                    <h4>{{ singleMovie.series }}</h4>
-                </div> -->
-
-                
-
             </div>
+
+            <button>
+                LOAD ME
+            </button>
         </div>
 
     </main>
@@ -126,34 +119,37 @@ export default {
 main {
     background-color: black;
     color: white;
-}
-.series-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
 
-    // > .single-serie {
-    //     background-color: rgb(61, 100, 100);
-    //     width: calc((100% / 6) - 20px);
-    //     border: 2px dashed red;
-    //     margin: 10px;
+    .container {
+        position: relative;
+        text-align: center;
 
-    //     .img-container {
+        
+        h2 {
+            background-color: $footer-bg-blue;
+            padding: 10px;
+            position: absolute;
+            top: -25px;
+            left: -10px;
+        }
 
-    //         img {
-    //             width: 100%;
-    //             height: 200px;
-    //             object-fit: cover;
-    //             object-position: top;
-    //             display: block;
-    //         }
-    //     }
-
-    //     h4 {
-    //         text-transform: uppercase;
-    //         padding: 10px 0px;
-    //     }
-    // }
+        button {
+            background-color: $footer-bg-blue;
+            color: white;
+            cursor: pointer;
+            padding: 15px 50px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+        .series-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px;
+            padding: 40px 0px;
+            
+        }
+    }
 }
 
 </style>
