@@ -26,7 +26,9 @@ methods: {
 
 <template>
     <header>
-        <div class="container">
+        <!-- TOP HEADER -->
+        <section>
+            <div class="container">
             <div class="row">
 
                 <div class="logo-container">
@@ -34,7 +36,7 @@ methods: {
                 </div>
                 <nav class="link-container">
                     <ul class="">
-                        <li v-for="singleLink in headerNavLink" :key="linkIndex">
+                        <li v-for="(singleLink, i) in headerNavLink" :key="linkIndex">
                             <a href="#">{{ singleLink }}</a>
                         </li>
                     </ul>
@@ -42,6 +44,12 @@ methods: {
 
             </div>
         </div>
+        </section>
+
+        <!-- JUMBO SECTION -->
+        <section class="jumbo-section">
+            
+        </section>
     </header>
 </template>
 
@@ -97,6 +105,13 @@ ul {
             border-bottom: 3px solid $footer-bg-blue;
         }
     }
+}
+
+.jumbo-section {
+    height: 40vh;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 </style>
