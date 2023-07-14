@@ -3,29 +3,29 @@ export default {
     name: "FooterComponent",
 data (){
     return {
-        // card: [
-        // {
-        //     image: "../assets/img/buy-comics-digital-comics.png",
-        //     name: "digital comics"
-        // },
-        // {
-        //     image: "../assets/img/buy-comics-merchandise.png",
-        //     name: "dc merchandise"
-        // },
-        // {
-        //     image: "../assets/img/buy-comics-shop-locator.png",
-        //     name: "comics shop locator"
-        // },
-        // {
-        //     image: "../assets/img/buy-comics-subscriptions.png",
-        //     name: "subscriptions"
-        // },
-        // {
-        //     image: "../assets/img/buy-dc-power-visa.svg",
-        //     name: "dc power visa"
-        // },
+        card: [
+        {
+            image: "buy-comics-digital-comics.png",
+            name: "digital comics"
+        },
+        {
+            image: "buy-comics-merchandise.png",
+            name: "dc merchandise"
+        },
+        {
+            image: "buy-comics-shop-locator.png",
+            name: "comics shop locator"
+        },
+        {
+            image: "buy-comics-subscriptions.png",
+            name: "subscriptions"
+        },
+        {
+            image: "buy-dc-power-visa.svg",
+            name: "dc power visa"
+        },
 
-        // ],
+        ],
 
         dcComicsLinks: [
             `Characters`,
@@ -68,6 +68,9 @@ data (){
     }
 },
 methods: {
+    getImagePath : function (imgPath) {
+        return new URL (imgPath, import.meta.url).href;
+    }
 
 }
 };
@@ -80,40 +83,13 @@ methods: {
             <div class="container-smaller">
                 <div class="row">
 
-                    <div class="row-card card">
+                    <div class="row-card card"
+                    v-for="(singleCard, i) in card" :key="i">
 
                         <div class="img-container">
-                            <img src="../assets/img/buy-comics-digital-comics.png" alt="digital comics">
+                            <img :src="getImagePath(`../assets/img/${singleCard.image}`)" :alt="singleCard.name">
                         </div>
-                        <p><a href="#">digital comics</a></p>
-                    </div>
-
-                    <div class="row-card card">
-                        <div class="img-container">
-                            <img src="../assets/img/buy-comics-merchandise.png" alt="dc merchandise">
-                        </div>
-                        <p><a href="#">dc merchandise</a></p>
-                    </div>
-
-                    <div class="row-card card">
-                        <div class="img-container">
-                            <img src="../assets/img/buy-comics-shop-locator.png" alt="comics shop locator">
-                        </div>
-                        <p><a href="#">comics shop locator</a></p>
-                    </div>
-
-                    <div class="row-card card">
-                        <div class="img-container">
-                            <img src="../assets/img/buy-comics-subscriptions.png" alt="subscriptions">
-                        </div>
-                        <p><a href="#">subscriptions</a></p>
-                    </div>
-
-                    <div class="row-card card">
-                        <div class="img-container">
-                            <img src="../assets/img/buy-dc-power-visa.svg" alt="dc power visa">
-                        </div>
-                        <p><a href="#">dc power visa</a></p>
+                        <p><a href="#">{{singleCard.name}}</a></p>
                     </div>
 
                 </div>
@@ -229,7 +205,7 @@ methods: {
             img {
                 height: 100%;
                 display: block;
-                transition: all 0.8s;
+                transition: all 0.8s ease-in-out;
             }
 
             img:hover {
@@ -271,7 +247,9 @@ methods: {
 // --- CENTER FOOTER ---
 .center-footer {
     background-image: url('../assets/img/footer-bg.jpg');
-    padding: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 40px 40px 0px;
     position: relative;
     overflow: hidden;
 
@@ -285,9 +263,13 @@ methods: {
         margin-bottom: 10px;
     }
 
-    li {
+    ul {
+        padding-bottom: 20px;
+        
+        li {
         list-style: none;
         font-size: 0.8em;
+        line-height: 20px;
 
             a {
                 text-decoration: none;
@@ -299,20 +281,14 @@ methods: {
                 color: white;
             }
     }
-
-    .two-listes > nav:last-child {
-        margin-top: 20px;
     }
+
 
     .img-container {
         width: 400px;
         height: 200px;
         
-
-
             img {
-                width: 30%;
-                display: block;
                 position: absolute;
                 top: -50px;
             }

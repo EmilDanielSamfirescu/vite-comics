@@ -21,12 +21,17 @@ import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <template>
-<HeaderComponent />
-<MainComponent />
-<FooterComponent />
+
+  <HeaderComponent />
+
+  <MainComponent />
+
+  <FooterComponent />
+
 </template>
 
+
 <style lang="scss">
-@use "./assets/scss/main.scss";
+@use "./assets/scss/main.scss" as *;
 
 </style>

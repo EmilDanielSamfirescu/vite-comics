@@ -34,7 +34,7 @@ methods: {
                 </div>
                 <nav class="link-container">
                     <ul class="">
-                        <li v-for="(singleLink, i) in headerNavLink">
+                        <li v-for="singleLink in headerNavLink" :key="linkIndex">
                             <a href="#">{{ singleLink }}</a>
                         </li>
                     </ul>
