@@ -36,6 +36,7 @@
         margin: 10px;
 
         .img-container {
+            overflow: hidden;
 
             img {
                 width: 100%;
@@ -43,7 +44,16 @@
                 object-fit: cover;
                 object-position: top;
                 display: block;
+                transition: all 0.6s ease-in-out;
+                
+
+                &:hover {
+                scale: 1.2;
+                cursor: pointer;
             }
+            }
+            
+            
         }
 
         p {
@@ -51,7 +61,14 @@
             text-align: start;
             font-size: 0.8em;
             padding: 15px 0px;
+
+            &:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
+        }
+        
+        
     }
 
 

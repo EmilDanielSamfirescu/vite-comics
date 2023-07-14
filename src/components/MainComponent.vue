@@ -140,6 +140,10 @@ main {
             padding: 15px 50px;
             border: none;
             margin-bottom: 20px;
+
+            &:hover {
+                box-shadow: 0px 0px 15px white;
+            }
         }
         
         .series-container {

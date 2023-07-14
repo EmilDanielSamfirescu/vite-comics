@@ -205,12 +205,13 @@ methods: {
             img {
                 height: 100%;
                 display: block;
-                transition: all 0.8s ease-in-out;
+                transition: all 0.6s ease-in-out;
+
+                &:hover {
+                    scale: 1.2;
+                }
             }
 
-            img:hover {
-                scale: 1.2;
-            }
     }
 
     .card:hover {
@@ -236,11 +237,13 @@ methods: {
         a {
             color: white;
             text-decoration: none;
+
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
     }
 }
 
@@ -274,12 +277,14 @@ methods: {
             a {
                 text-decoration: none;
                 color: $header-color-link;
+
+
+                &:hover {
+                    text-decoration: underline;
+                    color: white;
+                }
             }
 
-            a:hover {
-                text-decoration: underline;
-                color: white;
-            }
     }
     }
 
@@ -316,11 +321,13 @@ methods: {
         border: 1px solid $footer-bg-blue;
         padding: 10px;
         cursor: pointer;
+
+
+        &:hover {
+            box-shadow: 0px 0px 6px white;
+        }
     }
 
-    button:hover {
-        box-shadow: 0px 0px 6px white;
-    }
 
     .follow {
         color: $footer-bg-blue;
